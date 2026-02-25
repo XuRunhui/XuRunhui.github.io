@@ -1,0 +1,23 @@
+<header class="site-header" role="banner">
+  <nav class="nav-container" aria-label="Main navigation">
+    <a href="{{ '/' | prepend: site.baseurl }}" class="nav-logo" aria-label="Home">
+      <span class="logo-mark">◈</span>
+      <span class="logo-text">XR</span>
+    </a>
+
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+
+    <ul class="nav-links" role="list">
+      {% for item in site.nav %}
+      <li>
+        <a href="{{ item.url | prepend: site.baseurl }}"
+           class="nav-link {% if page.url == item.url %}active{% endif %}">
+          {{ item.label }}
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>

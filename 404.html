@@ -1,0 +1,18 @@
+---
+layout: default
+title: Page Not Found
+permalink: /404.html
+---
+
+<section class="not-found" aria-labelledby="not-found-title">
+  <div style="text-align:center; padding: var(--space-16) var(--gutter);">
+    <p class="not-found-code" aria-hidden="true">404</p>
+    <h1 id="not-found-title">Page not found</h1>
+    <p style="color: var(--text-muted); font-family: var(--font-mono); font-size: 0.85rem; margin: 1rem 0 2rem;">
+      This page doesn't exist or was moved.
+    </p>
+    <a href="{{ '/' | prepend: site.baseurl }}" class="btn-outline">
+      ← Back to Home
+    </a>
+  </div>
+</section>

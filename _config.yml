@@ -1,0 +1,61 @@
+title: Xu Runhui
+description: >-
+  USC student. Building things at the intersection of systems and ideas.
+author:
+  name: Xu Runhui
+  email: xurunhui@usc.edu
+  github: XuRunhui
+  linkedin: xurunhui
+
+baseurl: ""
+url: "https://xurunhui.github.io"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /blog/:year/:month/:day/:title/
+
+# Sass
+sass:
+  sass_dir: assets/css
+  style: compressed
+
+# Plugins (GitHub Pages safe)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
+  - vendor
+
+# Collections
+collections:
+  projects:
+    output: false
+
+# Navigation
+nav:
+  - label: About
+    url: "/#about"
+  - label: Projects
+    url: "/#projects"
+  - label: Writing
+    url: /blog/
+  - label: Contact
+    url: "/#contact"
+
+# Social links (used in footer/meta)
+twitter_username: ""
+github_username: XuRunhui
+
+# SEO defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/images/og-default.png

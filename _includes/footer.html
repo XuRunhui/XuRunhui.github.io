@@ -1,0 +1,30 @@
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <p class="footer-name">Xu Runhui</p>
+      <p class="footer-tagline">USC · Los Angeles</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="mailto:{{ site.author.email }}" class="footer-link" aria-label="Email">
+        <span class="link-label">Email</span>
+        <span class="link-arrow">↗</span>
+      </a>
+      <a href="https://github.com/{{ site.author.github }}" class="footer-link" target="_blank" rel="noopener" aria-label="GitHub">
+        <span class="link-label">GitHub</span>
+        <span class="link-arrow">↗</span>
+      </a>
+      <a href="https://linkedin.com/in/{{ site.author.linkedin }}" class="footer-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <span class="link-label">LinkedIn</span>
+        <span class="link-arrow">↗</span>
+      </a>
+    </div>
+
+    <div class="footer-right">
+      <p class="footer-copy">
+        <span class="footer-year">{{ 'now' | date: '%Y' }}</span>
+        <span class="footer-built">Built with Jekyll</span>
+      </p>
+    </div>
+  </div>
+</footer>

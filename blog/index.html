@@ -1,0 +1,37 @@
+---
+layout: default
+title: Writing
+body_class: blog-page
+---
+
+<div class="container">
+  <header class="blog-header">
+    <span class="label">Writing</span>
+    <h1 class="blog-title">Notes & Essays</h1>
+    <p class="blog-subtitle">
+      Occasional writing on software, systems, and ideas worth working through slowly.
+    </p>
+  </header>
+
+  <div class="blog-posts" role="list">
+    {% for post in site.posts %}
+    <a href="{{ post.url | prepend: site.baseurl }}" class="blog-post-item" role="listitem">
+      <time class="blog-post-date" datetime="{{ post.date | date_to_xmlschema }}">
+        {{ post.date | date: "%b %-d, %Y" }}
+      </time>
+      <div>
+        <h2 class="blog-post-title">{{ post.title }}</h2>
+        {% if post.excerpt %}
+        <p class="blog-post-excerpt">{{ post.excerpt | strip_html | truncate: 140 }}</p>
+        {% endif %}
+      </div>
+    </a>
+    {% endfor %}
+
+    {% if site.posts.size == 0 %}
+    <p style="color: var(--text-muted); font-family: var(--font-mono); font-size: 0.85rem; padding: 3rem 0;">
+      Nothing published yet. First post coming soon.
+    </p>
+    {% endif %}
+  </div>
+</div>

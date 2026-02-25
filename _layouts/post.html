@@ -1,0 +1,52 @@
+---
+layout: default
+body_class: post-body
+---
+
+<article class="post-article" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <div class="post-meta-top">
+      <a href="{{ '/blog/' | prepend: site.baseurl }}" class="back-link">
+        <span class="back-arrow">←</span> Writing
+      </a>
+      <time class="post-date" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {{ page.date | date: "%B %-d, %Y" }}
+      </time>
+    </div>
+
+    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+
+    {% if page.excerpt %}
+    <p class="post-excerpt" itemprop="description">{{ page.excerpt | strip_html }}</p>
+    {% endif %}
+
+    {% if page.tags and page.tags.size > 0 %}
+    <div class="post-tags" aria-label="Tags">
+      {% for tag in page.tags %}
+      <span class="tag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  <footer class="post-footer">
+    <div class="post-nav">
+      {% if page.previous.url %}
+      <a href="{{ page.previous.url | prepend: site.baseurl }}" class="post-nav-link post-nav-prev">
+        <span class="nav-dir">← Previous</span>
+        <span class="nav-title">{{ page.previous.title }}</span>
+      </a>
+      {% endif %}
+      {% if page.next.url %}
+      <a href="{{ page.next.url | prepend: site.baseurl }}" class="post-nav-link post-nav-next">
+        <span class="nav-dir">Next →</span>
+        <span class="nav-title">{{ page.next.title }}</span>
+      </a>
+      {% endif %}
+    </div>
+  </footer>
+</article>

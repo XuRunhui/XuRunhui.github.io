@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% include head.html %}
+</head>
+<body class="{% if page.body_class %}{{ page.body_class }}{% endif %}">
+
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  {% include header.html %}
+
+  <main id="main-content" class="site-main" role="main">
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+
+  <script src="{{ '/assets/js/main.js' | prepend: site.baseurl }}" defer></script>
+</body>
+</html>
