@@ -216,26 +216,60 @@ body_class: home-body
         </div>
       </article>
 
-      <article class="project-card reveal" style="transition-delay:0.1s">
-        <span class="project-number label">002 · May–Dec 2024 · OSDI 2025</span>
-        <h3 class="project-title">TRAINCHECK: Silent Training Error Detection</h3>
-        <p class="project-desc">
-          Proactive framework that detects silent ML training bugs via
-          automatically inferred invariants — catching 18/20 real-world
-          bugs and uncovering 6 new ones (3 confirmed by maintainers).
-          Achieved &gt;9× higher detection coverage than anomaly-based
-          baselines. Published at OSDI 2025.
-        </p>
-        <div class="project-stack">
-          <span class="stack-item">Python</span>
-          <span class="stack-item">PyTorch</span>
-          <span class="stack-item">DeepSpeed</span>
-          <span class="stack-item">ML Systems</span>
+      <article class="pub-card reveal" style="transition-delay:0.1s">
+        <div class="pub-body">
+          <span class="pub-badge">OSDI '25</span>
+          <h3 class="pub-title">Training with Confidence: Catching Silent Errors in Deep Learning Training with Automated Proactive Checks</h3>
+          <p class="pub-authors">
+            Jiang, Yuxuan · Zhou, Ziming · Xu, Boyu · Liu, Beijie · <strong>Xu, Runhui</strong> · Huang, Peng
+          </p>
+          <p class="pub-venue">
+            19th USENIX Conference on Operating Systems Design and Implementation (OSDI '25) — Boston, MA, July 2025
+          </p>
+          <p class="pub-desc">
+            TRAINCHECK is a proactive framework that detects silent ML training bugs
+            by automatically inferring training invariants and checking them at runtime —
+            without requiring bug-specific oracles. Catches 18/20 real-world bugs,
+            uncovers 6 previously unknown ones (3 confirmed upstream), and achieves
+            &gt;9× higher detection coverage than anomaly-based baselines with minimal
+            runtime overhead.
+          </p>
+          <div class="pub-stack">
+            <span class="stack-item">Python</span>
+            <span class="stack-item">PyTorch</span>
+            <span class="stack-item">DeepSpeed</span>
+            <span class="stack-item">ML Systems</span>
+            <span class="stack-item">Program Analysis</span>
+          </div>
+          <div class="pub-links">
+            <a href="/assets/traincheck-osdi25-preprint.pdf" class="pub-link pub-link--primary" target="_blank" rel="noopener">
+              Paper ↗
+            </a>
+            <a href="/assets/traincheck-osdi25-poster.pdf" class="pub-link" target="_blank" rel="noopener">
+              Poster ↗
+            </a>
+            <a href="/assets/traincheck-osdi25-slides.pdf" class="pub-link" target="_blank" rel="noopener">
+              Slides ↗
+            </a>
+            <a href="https://github.com/OrderLab/TrainCheck" class="pub-link" target="_blank" rel="noopener">
+              Code ↗
+            </a>
+          </div>
         </div>
-        <div class="project-links">
-          <a href="https://github.com/XuRunhui" class="project-link" target="_blank" rel="noopener">
-            GitHub ↗
-          </a>
+
+        <div class="pub-metrics" aria-label="Key results">
+          <div class="pub-metric">
+            <span class="pub-metric-value">18/20</span>
+            <span class="pub-metric-label">Real bugs caught</span>
+          </div>
+          <div class="pub-metric">
+            <span class="pub-metric-value">&gt;9×</span>
+            <span class="pub-metric-label">Coverage vs baseline</span>
+          </div>
+          <div class="pub-metric">
+            <span class="pub-metric-value">6</span>
+            <span class="pub-metric-label">New bugs found</span>
+          </div>
         </div>
       </article>
 
